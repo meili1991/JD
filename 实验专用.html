@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../../../JS/myFunction.js"></script>
+    <script type="text/javascript" src="../../../JS/EventDeal.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            /*border: 1px solid #000;*/
+            /*padding: 10px;*/
+            /*float: left;*/
+            background-color: green;
+        }
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-bottom: 20px;
+            margin-left:20px;
+            margin-top: 20px;
+        }
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+        .bbb {
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body class="xx">
+<input width="100" type="text" value="wdawd" class="xx">;
+<div id="mei" class="sb ccc yy">
+    我是谁啊
+    <span class="xx">!!!</span>
+    heheh
+    <span class="xx">!!!</span>
+</div>
+<span class="xx">
+    <span class="xx">!!!</span>
+</span>
+<div class="box1">
+    <div class="box3 xx"></div>
+    <div class="box2"></div>
+</div>
+<div class="bbb xx" id="only"></div>
+</body>
+<script>
+    EventDeal.addEvent(window,"load",function(){
+        alert(document.getElementById("only").children[0]);
+        alert(1);
+    });
+    EventDeal.addEvent(window,"load",function(){
+        alert(2);
+    });
+
+//   document.write("<div>sb</div>");//不会转义html标签
+   var mei=document.getElementById("mei");
+//   mei.innerHTML=1+2;//数字赋值结果会自动转换为string
+//alert(typeof mei.innerHTML);
+//   mei.innerHTML="<a href='#'>扫码登录</a>";//不会转义html标签
+//   alert(mei.childNodes[0].nodeValue);//获得文本内容
+//   mei.childNodes[0].nodeValue="<div>sb</div>";//会转义html标签
+//addClass(mei," ");
+removeClass(mei,"sb yy");
+//addClass(mei,"xxx");
+//removeClass(mei,"xxx");
+//alert(getByClassName(document,"xx").length);
+//alert(document.getElementsByClassName);//IE中显示undefined
+var arr=[];
+for(var i=0;i<mei.childNodes.length;i++){
+    arr.push(mei.childNodes[i])//children全兼容好用,忽略文本节点，childNodes包含文字节点，IE67也勉强支持。。。8,9,10都支持
+    //children返回HTMLCollection，childNodes返回Nodlist
+}
+    alert(mei.children);
+</script>
+</html>

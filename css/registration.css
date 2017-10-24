@@ -1,0 +1,150 @@
+.re-top {
+    height: 100px;
+    padding:0 25px;
+    box-shadow: 0 5px 10px 0 #eee;
+}
+.re-logo {
+    margin-top: 20px;
+}
+.welcome {
+    font: 24px "微软雅黑";
+    color: #000;
+    margin-top:35px;
+    padding-left: 38px;
+}
+.jump {
+    font:16px "微软雅黑";
+    margin-top:56px;
+}
+.jump span {
+    color: #b3b3b3;
+}
+.jump a:hover {
+    color: #464646;
+    text-decoration: underline;
+}
+.main {
+    /*background-color: green;*/
+    /*height: 500px;*/
+    padding:60px 0 60px 218px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.main-re {
+    border-right: 1px solid #e5e5e5;
+    padding: 0 100px 30px 0;
+}
+.re-box {
+    border: 1px solid #dbdbdb;
+    height: 54px;
+}
+.re-box span{
+    width: 70px;
+    font: 14px/54px "微软雅黑";
+    /*background-color: pink;*/
+    /*text-align: center;*/
+    padding: 0 30px 0 20px;
+    /*letter-spacing: 12px;*/
+}
+.re-box input{
+    font: 14px/54px "微软雅黑";
+    width: 190px;
+    /*background-color: blue;*/
+    padding: 0 80px 0 8px;
+    color: #ccc;
+}
+.main-re .reminder {
+    height: 35px;
+    width: 380px;
+    line-height: 35px;
+    padding-left: 20px;
+    position: relative;
+}
+.reminder i {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+.reminder .i-nomal {
+    background: url(../images/re-icon.png) 0 -100px no-repeat;
+}
+.reminder .i-error {
+    background: url(../images/re-icon.png) -17px -100px no-repeat;
+}
+.re-tel {
+    border-right: 1px solid #dbdbdb;
+    position: relative;
+}
+.re-tel i {
+    width: 14px;
+    height: 7px;
+    position: absolute;
+    right: 12px;
+    top: 24px;
+    overflow: hidden;
+}
+.re-tel i s {
+    font: 14px "宋体";
+    position: absolute;
+    top: -8px;
+}
+.main-re button {
+    width: 400px;
+    height: 56px;
+    background-color: #eb1726;
+    margin-top:35px;
+    font: 400 16px "微软雅黑";
+    color: #fff;
+    /*margin-bottom: 30px;*/
+}
+.vip {
+    padding-left: 120px;
+}
+.vip a {
+    display: block;
+    font: 14px/25px "微软雅黑"
+}
+.vip a:hover {
+    font-weight:700;
+    color: #000;
+    text-decoration: underline;
+}
+.vip .enterprise {
+    border-bottom: 1px solid #e5e5e5;
+    width: 100px;
+    padding:0 0 32px 50px;
+    position: relative;
+}
+.vip i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background: url(../images/re-icon.png) 0 -50px no-repeat;
+}
+.vip .international {
+    width: 100px;
+    padding: 32px 0 0 50px;
+    position: relative;
+}
+.international i {
+    top: 40px;
+    background-position: -50px -50px;
+}
+.footer {
+    padding-top: 30px;
+    text-align: center;
+    color: #a2a2a2;
+}
+.re-links a {
+    padding:0 10px;
+    color: #a2a2a2;
+}
+.re-copy {
+    margin: 20px 0 30px 0;
+}
+.box-error {
+    border-color: #e31726;
+}

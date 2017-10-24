@@ -1,0 +1,387 @@
+@charset "UTF-8";
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+fieldset, img,input,button { border:none; padding:0;margin:0;outline-style:none; }
+ul, ol { list-style:none; }
+input { padding-top:0; padding-bottom:0; font-family: "SimSun","宋体";}
+
+/*设置占位文本placeholder的颜色*/
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color:    #ccc;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color:    #ccc;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+    color:    #ccc;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color:    #ccc;
+}
+select, input { vertical-align:middle;}/*以光标中心为基线垂直居中*/
+select, input, textarea { font-size:12px; margin:0; }
+textarea { resize:none; } /*防止拖动*/
+img {border:0;	vertical-align:middle; }  /*  去掉图片低部默认的3像素空白缝隙*/
+table { border-collapse:collapse; }/*合并边框*/
+body {
+    font:12px/150% Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;
+    color:#666;
+    background:#fff
+}
+.clearfix:before,.clearfix:after {
+    content:"";
+    display:table;
+}/*清除浮动最好的方法*/
+.clearfix:after{clear:both;}
+.clearfix{
+    *zoom:1;/*IE/7/6*/
+}
+a {color:#666; text-decoration:none; }
+a:hover{color:#C81623;}
+h1,h2,h3,h4,h5,h6 {text-decoration:none;font-weight:normal;font-size:100%;}
+s,i,em{font-style:normal;text-decoration:none;}
+.col-red{color: #C81623!important;}
+
+/*公共类*/
+.w {  /*版心 提取 */
+    width: 1210px;margin:0 auto;
+}
+.fl {
+    float:left
+}
+.fr {
+    float:right
+}
+.al {
+    text-align:left
+}
+.ac {
+    text-align:center
+}
+.ar {
+    text-align:right
+}
+.hide {
+    display:none
+}
+
+/*顶部开始*/
+.shortcut {
+    height: 30px;
+    width: 100%;/*如果是浮动或者绝对定位absolute，则必须添加width: 100%，不然无法继承宽度(这时宽度由内容宽度决定）;*/
+    line-height:30px;
+    background-color: #F1F1F1;
+}
+.dt,
+.shortcut .fore
+{
+    padding: 0 20px 0 10px;
+    position: relative;
+    background-color: red;
+}
+.dt i,
+.fore i
+{
+    font:400 15px/15px "宋体";
+    position: absolute;
+    right: 3px;
+    top: 13px;
+    height: 7px;
+    width: 15px;
+    overflow: hidden;
+}
+.dt s,
+.fore s
+{
+    position: absolute;
+    top: -8px;
+    left: 0;
+}
+.fr li {
+    padding: 0 5px;
+    position: relative;
+}
+.fr .line {
+    width: 1px;
+    height: 12px;
+    background-color: #ddd;
+    margin-top: 9px;
+    margin-left:5px;
+    margin-right: 5px;
+    padding: 0;
+}
+.shortcut .tel-jd {
+    padding: 0 20px;
+}
+.tel {
+    position: absolute;
+    top: 5px;
+    left:0;
+    width: 15px;
+    height: 20px;
+    background: url(../images/sprite.png) 0 0 no-repeat;
+}
+#mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+}
+#entrance {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin:-200px 0 0 -200px;
+    background: url(../images/QQ截图20170907144317.png) 0 0 no-repeat;
+    font: 300px/400px "微软雅黑";
+    text-align: center;
+    color: #000;
+}
+#closeX {
+    width: 20px;
+    text-align: center;
+    background-color: rgba(0,0,0,.2);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font: 18px/20px "宋体";
+    color: #fff;
+}
+#closeX:hover {
+    background-color: rgba(0,0,0,.4);
+}
+/*顶部结束*/
+
+/*topbanner开始*/
+.topbanner {
+    background-color: #8a25c6;
+}
+.topbanner .w {
+    position: relative;
+}
+.close-banner {
+    width: 19px;
+    height: 19px;
+    background: url(../images/close.png) 0 0 no-repeat;
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+.close-banner:hover {
+    background-position: 0 -19px;
+}
+/*topbanner结束*/
+
+/*logo部分开始*/
+.logo {
+    box-sizing: border-box;/*浏览器都支持*/
+    width: 360px;
+    height: 100px;
+    padding-top: 25px;
+    position: relative;
+}
+/*序选择器IE8及以下不支持*/
+.logo a:nth-child(1) {
+    width: 270px;
+    height: 60px;
+    display: block;
+    background:url(../images/logo.png) 0 0 no-repeat;
+}
+.logo a:nth-child(2){
+    display: block;
+    width: 180px;
+    height: 80px;
+    background:url(../images/dong.gif) 0 0 no-repeat;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.search {
+    width: 538px;
+    height: 35px;
+    margin-top: 25px;
+}
+.search input {
+    border: 2px solid #C81623;
+    height: 31px;
+    width: 450px;
+    padding-left:4px;/*文本框里面可以设置padding！！！*/
+    font:14px "microsoft yahei";
+    color: #666;
+    /*按钮里面可以设置字体颜色大小*/
+}
+.search button {
+    width: 80px;
+    height: 35px;
+    background-color: #C81623;
+    text-align: center;
+    line-height: 35px;
+    font: 16px "microsoft yahei";
+    color: #FFF;
+    /*按钮里面可以设置字体颜色大小*/
+    cursor: pointer;/*让鼠标变成小手*/
+}
+.car {
+    width: 96px;
+    height: 34px;
+    /*background-color: blue;*/
+    margin: 25px 65px 0 0;
+    line-height:34px;
+    padding-left: 43px;
+    border: 1px solid #DFDFDF;
+    position: relative;
+}
+.car span:nth-child(2) {
+    width: 16px;
+    height: 13px;
+    position: absolute;
+    top: 10px;
+    left: 19px;
+    background: url(../images/sprite.png) -1px -59px no-repeat;
+}
+.car span:nth-child(3) {
+    position: absolute;/*脱离标准流后，宽高由内容决定*/
+    right: 15px;
+    font:400 13px/34px simsun;
+}
+.car span:nth-child(4) {
+    position: absolute;
+    top: -5px;
+    width: 16px;
+    height: 14px;
+    background-color: #C81623;
+    line-height:14px;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 7px 7px 7px 0px;/*圆角边框 IE8及以下不支持*/
+}
+.some ul li {
+    padding: 0 10px 0 0;
+    margin-top:6px;
+}
+.some ul li:first-child a {
+    color:#C81623;
+}
+/*头部结束*/
+.jd-nav {
+    height: 44px;
+    border-bottom:2px solid #C81623;
+}
+.dropdown {
+    width: 210px;
+    height: 44px;
+    overflow: visible;
+    position: relative;
+    z-index: 10;
+}
+.dropdown .nav-dt {
+    display: block;
+    background-color: #C81633;
+    font-size:16px;
+    line-height: 44px;
+    color: #fff;
+    padding-left:10px;
+}
+.dropdown .nav-dd {
+    height: 465px;
+    background-color: rgb(243, 26, 42);
+    margin-top:2px;
+}
+.nav-dd li {
+    border-left:1px solid #C81633;
+    font:14px/31px "微软雅黑";
+    color:#fff;
+    padding:0 10px 0 9px;
+}
+.nav-dd li span{
+    float: right;
+    font-family:"宋体";
+    font-weight:600;
+}
+.jd-nav .nav-navigation li {
+    float: left;
+
+}
+.jd-nav .nav-navigation li:first-child {
+    background: url(../images/new.jpg) right top no-repeat;
+}
+.jd-nav .nav-navigation li a{
+    display: block;
+    line-height:44px;
+    padding:0 20px ;
+    font-size:16px;
+    font-weight:700;
+}
+/*底部开始*/
+.slogen {
+    height: 54px;
+    padding:20px 0;/*设置上下相同内边距，使内容垂直居中的一种方式*/
+    background-color: #f5f5f5;
+    position: relative;
+}
+.slogen span {
+    position:absolute;
+    left: 50%;
+}
+.slogen span:nth-child(1){
+    margin-left: -600px;
+}
+.slogen span:nth-child(2){
+    margin-left: -300px;
+}
+.slogen span:nth-child(4){
+    margin-left: 300px;
+}
+.service dl {
+    width: 198px;
+    margin-top: 20px;
+    float: left;
+}
+.service dt {
+    height: 28px;
+    font:700 16px "微软雅黑";
+}
+.service dd {
+    height: 20px;
+}
+.coverage {
+    width: 210px;
+    height: 167px;
+    float: right;
+    background: url(../images/china.png) left bottom no-repeat;
+    margin-top: 20px;
+}
+.coverage h1{
+    font:700 16px "微软雅黑";
+    text-align: center;
+    margin-bottom: 16px;
+}
+.coverage a:nth-child(3) {
+    float: right;
+    cursor: pointer;
+}
+.jd-footer .last {
+    border-top: 1px solid #E5E5E5;
+    margin-top: 30px;
+    text-align: center;
+    padding:23px 0 30px 0;
+}
+.links {
+    height: 23px;
+}
+.links a {
+    padding:0 6px;
+}
+.copytext {
+    line-height: 18px;
+    padding-bottom:23px;
+}
+
+
+
